@@ -9,6 +9,7 @@ start = timeit.default_timer()
 rows = st.number_input("how many rows", 0)
 
 
+@st.experimental_memo()
 def make_df(rows):
     dates = pd.date_range("20130101", periods=rows)
     df = pd.DataFrame(np.random.randn(rows, 4), index=dates, columns=list("ABCD"))
