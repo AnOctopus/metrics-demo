@@ -19,5 +19,6 @@ def make_df(rows):
 df = make_df(rows)
 ss[rows] = df
 st.write(df)
+st.write(f'{len(ss)} things stored')
 end = timeit.default_timer()
 st.write(end - start)
